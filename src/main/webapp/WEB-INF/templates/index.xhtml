@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:pt="jakarta.faces.passthrough"
+      xmlns:jsf="jakarta.faces"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="primefaces">
+
+<h:head>
+    <f:facet name="first">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </f:facet>
+    <title>RL</title>
+    <h:outputStylesheet library="rl" name="styles/layout.css" />
+    <h:outputStylesheet library="rl" name="styles/components.css" />
+
+    <h:outputScript target="body" library="primefaces" name="jquery/jquery.js" />
+    <h:outputScript target="body" library="rl" name="javascripts/app.js" />
+</h:head>
+
+<h:body>
+    <header class="rl-topbar">
+        <h:graphicImage library="rl" name="images/novo_logo_rl.png" />
+        <h:graphicImage library="rl" name="images/logo_nome_sistema.png" height="38" />
+
+
+        <a href="#" class="rl-toggle  js-toggle"><i class="pi pi-bars" style="font-size: 1.3rem"></i></a>
+    </header>
+
+
+    <aside class="rl-sidebar  js-sidebar">
+        <nav class="rl-menu">
+            <ul>
+                <li>
+                    <h:link outcome="dashboard"><i class="pi  pi-home"></i>Dashboard</h:link>
+                </li>
+                <li>
+                    <h:link outcome="periodo-letivo"><i><h:graphicImage library="rl" name="images/calendar.png" height="16" width="16"/></i>Período Letivo</h:link>
+                </li>
+                <li>
+                    <h:link outcome="turno"><i class="pi  pi-hourglass"></i>Turno</h:link>
+                </li>
+                <li>
+                    <h:link outcome="horario"><i><h:graphicImage library="rl" name="images/clock.png" height="20" width="20"/></i>Horário</h:link>
+                </li>
+                <li>
+                    <h:link outcome="professor"><i><h:graphicImage library="rl" name="images/teacher.png" height="20" width="20"/></i>Professor</h:link>
+                </li>
+                <li>
+                    <h:link outcome="disciplina"><i><h:graphicImage library="rl" name="images/enigma.png" height="20" width="20"/></i>Disciplina</h:link>
+                </li>
+                <li>
+                    <h:link outcome="aluno"><i class="pi  pi-user"></i>Aluno</h:link>
+                </li>
+                <li>
+                    <h:link outcome="turma"><i class="pi  pi-users"></i>Turma</h:link>
+                </li>
+                <li>
+                    <h:link outcome="sala"><i><h:graphicImage library="rl" name="images/classroom_18854719.png" height="20" width="20"/></i>Sala</h:link>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section class="rl-content  js-content">
+        <ui:insert name="paginas" />
+    </section>
+
+</h:body>
+</html>

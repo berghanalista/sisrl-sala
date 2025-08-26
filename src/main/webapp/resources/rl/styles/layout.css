@@ -1,0 +1,128 @@
+/* TOPBAR */
+.rl-topbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	min-height: 50px;
+	z-index: 9999;
+
+    background-color: #079992;
+}
+
+.rl-topbar > img {
+
+	margin-top: 5px;
+	margin-left: 15px;
+    padding: 1px;
+    height: 50px;
+    width: 52px;
+
+}
+
+.rl-topbar > img:nth-child(2){
+    height: 38px;
+    width: auto;
+    margin-left: 50%;
+    transform: translateX(-70%);
+}
+
+
+.rl-topbar > img:nth-child(2){
+    display: none;
+}
+
+/* SIDEBAR */
+.rl-sidebar {
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	width: 210px;
+	margin-left: -211px;
+	z-index: 9998;
+	transition: margin-left 0.5s;
+	overflow-y: auto;
+	
+	background-color: #cfe8e7;
+	border-right: 1px solid #9db3b1;
+}
+
+.rl-sidebar.is-toggled {
+	margin-left: 0px;
+}
+
+@media (min-width: 960px) {
+	.rl-sidebar {
+		margin-left: 0px;
+	}
+	
+	.rl-sidebar.is-toggled {
+		margin-left: -211px;
+
+	}
+
+}
+
+@media (min-width: 790px) {
+    .rl-topbar > img:nth-child(2){
+        display: inline;
+        margin-left: 50%;
+        transform: translateX(-70%);
+
+    }
+
+
+}
+
+
+
+/* CONTENT */
+.rl-content {
+	padding: 0 15px;
+	margin-top: 50px;
+	transition: margin-left 0.5s;
+    font-size: 12px;
+}
+
+@media (min-width: 960px) {
+	.rl-content {
+		margin-left: 210px;
+	}
+	
+	.rl-content.is-toggled {
+		margin-left: 0;
+	}
+
+
+
+}
+
+.meu_toolbar.ui-toolbar.ui-widget{
+    background-color: #1abc9c;
+    padding: 8px;
+}
+
+.ui-button.ui-widget.ui-state-default.ui-button-text-only.ui-button-raised.novo{
+    margin-right: 2px;
+}
+
+.ui-inputtext-responsive {
+    width: 100%; /* Preenche a largura do contêiner */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+}
+
+.dt_picker.p-datepicker.ui-calendar > .ui-inputfield.ui-widget.ui-state-default.hasDatepicker{
+    border-color: #079992;
+}
+
+@media (max-width: 720px) {
+    .p-datepicker.ui-datepicker-touch-ui > .ui-datepicker-touch-ui{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 80vw;
+        transform: translate(-50%, -30%);
+    }
+}
+

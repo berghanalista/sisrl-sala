@@ -1,0 +1,43 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/modelo/index.xhtml">
+
+    <ui:define name="paginas">
+        <h1 class="aw-page-title">Horário</h1>
+
+        <h:form id="frmAluno">
+            <p:toolbar styleClass="meu_toolbar">
+                <p:toolbarGroup>
+                    <p:commandButton value="Salvar" styleClass="ui-button-raised"/>
+                </p:toolbarGroup>
+                <p:toolbarGroup align="right">
+                    <p:commandButton value="Novo" styleClass="ui-button-raised novo"/>
+                    <p:button value="Pesquisa" styleClass="ui-button-raised"/>
+                </p:toolbarGroup>
+            </p:toolbar>
+            <div class="card">
+
+
+                <p:panelGrid columns="3" layout="grid"
+                             columnClasses="ui-grid-col-4, ui-grid-col-4, ui-grid-col-4" styleClass="ui-fluid">
+
+                    <p:inputText  placeholder="Órdem Horário:" style="border-color: #079992"  />
+                    <p:datePicker styleClass="dp1" placeholder="Início: " id="timeonly1" pattern="HH:mm" timeOnly="true" showButtonBar="true" timeZone="UTC" />
+                    <p:datePicker placeholder="Término: " id="timeonly2" pattern="HH:mm" timeOnly="true" showButtonBar="true" timeZone="UTC" />
+
+                </p:panelGrid>
+<p:separator style="margin-top: 20px; margin-bottom: 20px; border-color: #079992; border-width: 1px" />
+                <p:selectOneRadio id="line"  layout="responsive" columns="3" style="text-align: center">
+                    <f:selectItem itemLabel="Manhã" itemValue="Option1"/>
+                    <f:selectItem itemLabel="Integral" itemValue="Option2"/>
+                    <f:selectItem itemLabel="Noite" itemValue="Option3"/>
+                </p:selectOneRadio>
+
+            </div>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

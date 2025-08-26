@@ -1,0 +1,39 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/modelo/index.xhtml">
+
+    <ui:define name="paginas">
+        <h1 class="aw-page-title">Turno</h1>
+
+        <h:form id="frmturma">
+            <p:toolbar styleClass="meu_toolbar">
+                <p:toolbarGroup>
+                    <p:commandButton value="Salvar" styleClass="ui-button-raised"/>
+                </p:toolbarGroup>
+                <p:toolbarGroup align="right">
+                    <p:commandButton value="Novo" styleClass="ui-button-raised novo"/>
+                    <p:button value="Pesquisa" styleClass="ui-button-raised"/>
+                </p:toolbarGroup>
+            </p:toolbar>
+            <div class="card">
+                <p:panelGrid columns="2" layout="grid"
+                             columnClasses="ui-grid-col-6, ui-grid-col-6" styleClass="ui-fluid">
+
+                    <p:inputText placeholder="Descrição do turno" style="border-color: #079992;" />
+
+                    <p:datePicker styleClass="dt_picker" placeholder="Início do turno"  />
+                    <p:datePicker styleClass="dt_picker" placeholder="Término do turno"  />
+
+                </p:panelGrid>
+
+
+                <p:inputTextarea placeholder="Observações: " styleClass="ui-inputtext-responsive" style="border-color: #079992;"  />
+            <h:inputHidden value="id" />
+            </div>
+        </h:form>
+    </ui:define>
+
+</ui:composition>
